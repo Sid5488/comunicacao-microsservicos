@@ -13,7 +13,7 @@ async function createInitialData() {
     await userModel.create({
       name: 'User Test',
       email: 'test@test.com',
-      password: ""
+      password: password
     }); 
   } catch (error) {
     console.error(error);

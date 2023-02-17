@@ -11,7 +11,6 @@ const PORT = env.PORT || 8081;
 // createInitialData();
 
 app.use(express.json());
-app.use(userRouter.router);
 
 app.get('/api/health-check', (request, response) => {
   return response.status(200).json({
@@ -20,6 +19,8 @@ app.get('/api/health-check', (request, response) => {
     httpStatus: 200
   });
 });
+
+app.use(userRouter.router);
 
 app.listen(PORT, () =>
   console.info(`Server started successfully at port ${PORT}`)
