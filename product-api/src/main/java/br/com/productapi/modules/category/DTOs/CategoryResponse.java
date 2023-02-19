@@ -1,6 +1,6 @@
-package br.com.productapi.modules.DTOs;
+package br.com.productapi.modules.category.DTOs;
 
-import br.com.productapi.modules.models.Category;
+import br.com.productapi.modules.category.models.Category;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;

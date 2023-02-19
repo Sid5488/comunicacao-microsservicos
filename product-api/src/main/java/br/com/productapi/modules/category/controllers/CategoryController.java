@@ -1,8 +1,8 @@
-package br.com.productapi.controllers;
+package br.com.productapi.modules.category.controllers;
 
-import br.com.productapi.modules.DTOs.CategoryRequestDTO;
-import br.com.productapi.modules.DTOs.CategoryResponse;
-import br.com.productapi.modules.services.CategoryService;
+import br.com.productapi.modules.category.DTOs.CategoryRequestDTO;
+import br.com.productapi.modules.category.DTOs.CategoryResponse;
+import br.com.productapi.modules.category.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

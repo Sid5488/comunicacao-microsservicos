@@ -1,6 +1,6 @@
-package br.com.productapi.modules.models;
+package br.com.productapi.modules.supplier.models;
 
-import br.com.productapi.modules.DTOs.CategoryRequestDTO;
+import br.com.productapi.modules.supplier.DTOs.SupplierRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,15 +11,17 @@ import org.springframework.beans.BeanUtils;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "CATEGORY")
-public class Category {
+@Table(name = "SUPPLIER")
+public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String description;
 
-    public static Category of(CategoryRequestDTO request) {
-        var response = new Category();
+    @Column(name = "NAME", nullable = false)
+    private String name;
+
+    public static Supplier of(SupplierRequestDTO request) {
+        var response = new Supplier();
 
         BeanUtils.copyProperties(request, response);
 
